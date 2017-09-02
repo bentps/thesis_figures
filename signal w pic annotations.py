@@ -18,7 +18,7 @@ os.chdir('/Users/BenPS/Dropbox/Physics/Data')
 #set up the figure
 fig = plt.figure(figsize=(4, 4)) #width, length
 gs = gridspec.GridSpec(2, 1, wspace=0.0, hspace=0.4,
-                               height_ratios=[3, 2]) #length, width
+                               height_ratios=[3, 1]) #length, width
 #panel a on the grid
 pa_inner_grid = gridspec.GridSpecFromSubplotSpec(2, 1,
         subplot_spec=gs[0], wspace=-0.0, hspace=0.0, 
@@ -121,8 +121,8 @@ darkgrey='#969696'
 violet='#5823f9'
 
 #fringe/nofringe inset locations
-nfloc=[.2, .25, .12, .075] #x,y of bottom left corner, width height, by axis pct
-floc=[.75, .22, .12, .2] #but it doesn't seem to actually correspond to that
+nfloc=[.16, .17, .1, .095] #x,y of bottom left corner, width height, by axis pct
+floc=[.75, .16, .1, .115] #but it doesn't seem to actually correspond to that
 
 #no fringe
 ax1 = plt.Subplot(fig, gs[1])
@@ -168,10 +168,10 @@ fxb=totalwavetime*np.array([0.69,0.96])
 fyb=0.5*np.array([0.41,0.62])
 fxt=totalwavetime*np.array([0.69,0.806])
 fyt=0.5*np.array([0.41,0.91])
-wave_signal.plot(nfxb, nfyb, linewidth=1, ls='--', color='black')
-wave_signal.plot(nfxt, nfyt, linewidth=1, ls='--', color='black')
-wave_signal.plot(fxb, fyb, linewidth=1, ls='--', color='black')
-wave_signal.plot(fxt, fyt, linewidth=1, ls='--', color='black')
+#wave_signal.plot(nfxb, nfyb, linewidth=1, ls='--', color='black')
+#wave_signal.plot(nfxt, nfyt, linewidth=1, ls='--', color='black')
+#wave_signal.plot(fxb, fyb, linewidth=1, ls='--', color='black')
+#wave_signal.plot(fxt, fyt, linewidth=1, ls='--', color='black')
 
 #panel labels
 #wave_signal.set_xlabel('Panel B                                                                             ')
@@ -479,4 +479,4 @@ atoms.xaxis.set_label_position('top')
 ##########################################
 
 #save pdf
-plt.savefig('insets_2panels.pdf')
+#plt.savefig('insets_2panels.pdf')
